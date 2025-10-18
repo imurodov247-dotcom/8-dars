@@ -1,11 +1,65 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>core</title>
-</head>
-<body>
-    <h1>HELO WORLD !</h1>
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container w-[50%] mx-auto">
+
+    <div class="hero flex -center justify-center flex-col mb-6">
+        <h1 class="text-4xl text-center py-8 pb-2">Expense Tracker</h1>
+        <p class="text-center">Add your expenses here</p>
+     </div>
+
+     <div class="summp-6 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+        
+        <div class="titles text-gray-400 text-sm flex justify-between mb-2">
+            <p>Umumiy xarajatlar</p>
+            <p>Umumiy urinishlar</p>
+        </div>
+           
+        <div class="amounts text-black-400 text-3xl flex justify-between font-bold-2">
+            <p>2000</p>
+            <p>2</p>
+        </div>
+    
+    
+    </div>
+    <div class=" mt-4  add-screen p-6 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+     
+       <div>
+            <div>
+                <label for="" class='text-md font-bold '>Description</label>
+                <input  placeholder="description" type="text" class=' mb-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'>
+            <div>
+                
+                <div class='flex gap-2 mt-4'>
+                    <div class='w-full'>
+                        <label for="" class='text-md font-bold '>Amount</label>
+                        <input  placeholder="amount" type="number" class=' mb-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'>
+                    </div>
+                
+                    <div class='w-full'>
+                        <label for="" class='text-md font-bold '>Category</label>
+                        <select   class=' mb-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'>
+                            <option value="food">Food</option>
+                            <option value="transport">Transport</option>
+                            <option value="shopping">Shopping</option>
+                            <option value="entertainment">Entertainment</option>
+                        </select>
+                     
+
+                    </div>
+            
+                </div>
+            
+            </div>
+                
+            </div>
+       </div>
+    
+       <button class=' w-full text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700'>Xarajat qo'shish tugmasi</button>
+    </div>
+
+</div>
+
+
+     {% endblock content %}
+    
