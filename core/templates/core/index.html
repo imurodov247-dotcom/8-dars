@@ -16,8 +16,8 @@
         </div>
            
         <div class="amounts text-black-400 text-3xl flex justify-between font-bold-2">
-            <p>2000</p>
-            <p>2</p>
+            <p>{{jami_miqdori}}</p>
+            <p>{{jami_soni}}</p>
         </div>
     
     
@@ -58,22 +58,27 @@
        
 </div>
     
-     <div class=" flex  items-center justify-between  sum mt-8 p-6 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
-    <div>
-    </div >
-                 
-    <div class='flex gap-2 items-center'> 
-        <h3 class='font-bold '>Yo'lkira</h3>
-        <p class='bg-gray-100 text-gray-500 py -1 px-2 text-sm rounded-xl'> Transport </p>
-    </div>
    
-    <div>
-        <div class='flex items-center gap-2'>
-            <h3 class='font-bold text-2xl '>$2000</h3>
+   {% for expense in expenses  %}
+            <div class=" flex  items-center justify-between  sum mt-8 p-6 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+            <div>
+            </div >
+                        
+            <div class='flex gap-2 items-center'> 
+                <h3 class='font-bold '>{{expense.description}}</h3>
+                <p class='bg-gray-100 text-gray-500 py -1 px-2 text-sm rounded-xl'> {{expense.category}} </p>
+            </div>
+        
+            <div>
+                <div class='flex items-center gap-2'>
+                    <h3 class='font-bold text-2xl '>${{expense.amount}}</h3>
+                    
+                    <button class=' delete-btn cursor-pointer text-gray-900 bg-white boredr border-gray-300 focus:outline-none hover :bg-gray-100 focus :ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-gray-800 dark:text:white dark:border-gray-600 dark:hover:bg-gray:600 dark:focus:ring-gray-700 hover:text-blue-500'> O'chirish🗑</button>
+                </div>
+            </div>
             
-            <button>O'chirish</button>
-        </div>
-    </div>
+   {% endfor %}
+    
 
 
 </div>
